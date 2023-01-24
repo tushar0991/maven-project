@@ -1,10 +1,10 @@
 pipeline
 {
-agent any 
+agent any
 stages
 {
- stage {'scm checkout'}
- {steps {git branch: 'master' , url: 'https://github.com/tushar0991/maven-project'}}
+  stage('scm checkout')
+  {steps {git branch: 'master' , url: 'https://github.com/prakashk0301/maven-project' }}
  
 	}
 }

@@ -10,6 +10,9 @@ stages
  {steps { withMaven(globalMavenSettingsConfig: 'ae251c5d-79f2-42a3-a6b2-65a07dcc26f4', jdk: 'My-JDK', maven: 'Maven_Home', mavenSettingsConfig: '84008234-f89e-41bb-a151-3c9a08bf0b7c') 
  {sh 'mvn clean package'}
 }}
+
+ stage ('docker build Or create image')
+ {steps {sh 'docker build -t tushar0991/mavenwebapp:01 .'}}
  
 	}
 }
